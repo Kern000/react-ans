@@ -6,14 +6,10 @@ export default function Numbers(){
 
     function removeAtRandom(){
         
-        // 1. pick a random index to remove
         let indexToRemove = Math.floor(Math.random() * allNumbers.length);
-
-        // 2. clone the allNumbers array from the state
-
-        // 3. remove the number specified at  the index in the `indexAtRemove` variable
-
-        // 4. set the clone back into the state
+        let clonedArray = [...allNumbers];
+        clonedArray.splice(indexToRemove, 1);
+        setAllNumbers(clonedArray);
     }
 
     return <React.Fragment>
