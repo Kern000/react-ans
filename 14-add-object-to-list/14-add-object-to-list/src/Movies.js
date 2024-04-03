@@ -18,10 +18,13 @@ export default function Movies(){
     const [title, setTitle] = useState("");
     const [director, setDirector] = useState("");
   
-
     function addMovie() {
 
-
+        let newMovie = {
+            "title": title,
+            "director": director
+        }
+        setMovies([...movies, newMovie])
     }
 
     return <React.Fragment>
