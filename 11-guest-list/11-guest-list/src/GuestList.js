@@ -13,7 +13,14 @@ export default function GuestList() {
 
     return (
         <React.Fragment>
-
+            <ul>
+                {guests ? guests.map((guest)=>
+                    <li>
+                        {guest}
+                    </li>
+                ) : <p> Loading...</p>
+                }
+            </ul>
         </React.Fragment>
     )
 }
